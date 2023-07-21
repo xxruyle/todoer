@@ -36,8 +36,8 @@ const ProjectManager = ( () => {
         projects.push(project); 
     }
     
-    const deleteProject = (titleName) => {
-        if (titleName === "Home")
+    const deleteProject = (titleId) => {
+        if (Number(titleId) === 0)
         {
             alert("cannot delete home page!")
             return false; 
@@ -46,7 +46,7 @@ const ProjectManager = ( () => {
         if (projects.length > 1)
         {
 
-            projects.splice(Number(titleName), 1);
+            projects.splice(Number(titleId), 1);
 
 
         } else {
